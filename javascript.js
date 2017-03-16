@@ -1,8 +1,8 @@
-﻿    var words = ["hey, go get some rest, you need to make a difference tomorrow", "why are you up?", "top of the mornin' to ya", "have a great day", "keep goin', you got this", "enjoy you're evening"], i=0;
-  
- setInterval(function() {         // \/ \/ callback function
-  $('#greetingHop').fadeOut(900, function() {
-                      // if i = last index ? i = 0 else i++
-    $(this).text(words[ (i === words.length - 1) ? i = 0 : i += 1] ).fadeIn(500);
-  });
-}, 14400000);
+ var time = new Date().getHours(); 
+if (time < 10) {
+    greeting = "top of the mornin' to ya";
+} else if (time < 23) {
+    greeting = "howdy, hope the day is going well, keep it up";
+} else {
+    greeting = "why are you still up?";
+}
